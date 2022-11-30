@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+
+* {
+    font-family: 'Quicksand', sans-serif;
+    color: gray;
+    box-sizing: border-box;
+}
+.logo p, .footer__logo p, h1 {
+    font-family: 'Sacramento', cursive;
+
+}
+body{
+    margin: 0;
+} 
+.section__content, .cards, .contact__content {
+    width: 90%;
+    margin: auto;
+    padding: 30px 0
+}
+h2 {
+    margin-top: 0;
+}
+
+header {
+    box-shadow: 0px 4px 18px 3px rgba(67,67,67,0.4);
+}
+header .section__content {
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    display: flex;
+    flex: 1;
+}
+.logo img {
+    width: 45px;
+    height: 45px;
+}
+.logo p {
+    margin: 0;
+    display: none;
+}
+#menu {
+                    /* à changer !!!!  */
+    display: none; 
+}
+
+video {
+    display: none;
+}
+.hero .section__content {
+    text-align: center;
+}
+h1 {
+    font-size: 2.3rem;
+    font-weight: lighter;
+    margin: 0;
+}
+.hero h2 {
+    font-size: 1.2rem;
+}
+.button {
+    border: solid 1px gray;
+    display: inline-block;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+#about .section__content, #job .section__content, #prices .section__content, #contact .section__content {
+    width: 100%;
+    position: relative;
+}
+#about h2, #job h2, #prices h2, #contact h2 {
+    margin-bottom: 0;
+    border: solid 1px black;
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    padding-top: 15px;
+    text-align: center;
+}
+#about img, #job img, .card:first-of-type, iframe {
+    width: 88%;
+    position: absolute;
+    top: 90px;
+    right: 0;
+}
+#about p, #job p {
+    width: 90%;
+    margin: 155px auto 0 auto;
+    text-align: justify;
+}
+#job p {
+    margin-top: 125px;
+}
+
+.cards, .contact__content {
+    padding: 0;
+    margin-top: 35px;
+}
+.card {
+    height: 170px;
+    border: solid 1px gray;
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+    background-color: white;
+}
+.card:first-of-type, iframe {
+    width: 80%;
+    right: 5%;
+    height: 160px;
+}
+.card h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+.title, .price, .description {
+    height: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.price {
+    font-size: 1.6rem;
+}
+
+.contact__content {
+    text-align: center;
+}
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    background-color: #8A8B41;
+    padding: 20px;
+}
+.footer__logo img {
+    width: 30px;
+    height: 30px;
+}
+.footer__logo p {
+    color: #E5D695;
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
