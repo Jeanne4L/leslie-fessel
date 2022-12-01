@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Psycho</title>
-    <link rel="icon" type="image/png" href="images/favicon.ico"/>
+    <link rel="icon" type="image/png" href="images/logo.png"/>
         <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/eafcd51cfc.js" crossorigin="anonymous"></script>
 </head>
@@ -14,9 +14,8 @@
         <div class="section__content">
             <div class="logo">
                 <img src="images/logo.png" alt="logo personnage en tailleur">
-                <p>Leslie<br/>Fessel</p>
             </div>
-            <nav>
+            <nav id="top">
                 <ul id="menu" class="closed">
                     <li><a href="#about">À propos</a></li>
                     <li><a href="#job">Psychomotricité</a></li>
@@ -28,8 +27,8 @@
         </div>
     </header>
     <main>
-        <section class="hero">
-            <video autoplay muted loop id="hero__video">
+        <section id="hero">
+            <video autoplay muted loop>
                 <source src="images/hero.mp4" type="video/mp4">
             </video>
             <div class="section__content">        
@@ -116,8 +115,8 @@
                 </div>
             </div>
         </section>
-        <a href="#menu">
-            <i class="fa-solid fa-circle-chevron-up" id="up"></i>
+        <a href="#hero" id="up">
+            <i class="fa-solid fa-circle-chevron-up"></i>
         </a>
     </main>
     <footer>

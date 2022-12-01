@@ -2,6 +2,8 @@ let main = document.querySelector('main')
 let burgerBtn = document.querySelector('#burger')
 let menu = document.querySelector('#menu')
 let upBtn = document.querySelector('#up')
+let header = document.querySelector('header')
+let headerLi = document.querySelectorAll('header a')
 
 // display dropdown
 function displayMenu() {
@@ -22,14 +24,26 @@ function reduceMenu() {
         displayMenu()
     })
 }
-burgerBtn.addEventListener('click', () => {
-    if(displayMenu()) {
-        reduceMenu()
-    } else {
-        menu.classList.remove('closed')
-        displayMenu()
+
+// change header color
+function changeColorHeaderLi(color) {
+    for (let i=0; i<headerLi.length; i++) {
+        headerLi[i].style.color = color
     }
-})
+}
+
+if(self.innerWidth < 1000) {
+    burgerBtn.addEventListener('click', () => {
+        if(displayMenu()) {
+            reduceMenu()
+        } else {
+            menu.classList.remove('closed')
+            displayMenu()
+        }
+    })
+} else {
+    menu.classList.remove('closed')
+}
 
 window.addEventListener('scroll', () => {
     if (window.pageYOffset === 0) {
@@ -38,3 +52,17 @@ window.addEventListener('scroll', () => {
         upBtn.style.display = 'inline-block'
     }
 })
+
+if(self.innerWidth > 1000) {
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset === 0) {
+            header.style.backgroundColor = 'transparent'
+            changeColorHeaderLi('white')
+            header.style.boxShadow = 'none'
+        } else {
+            header.style.backgroundColor = 'white'
+            changeColorHeaderLi('rgba(64,69,56, 0.9)')
+            header.style.boxShadow = '0px 4px 18px 3px rgba(67,67,67,0.4)'
+        }
+    })
+}

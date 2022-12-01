@@ -7,7 +7,7 @@
     color: rgba(64,69,56, 0.9);
     box-sizing: border-box;
 }
-.logo p, .footer__logo p, h1 {
+.footer__logo p, h1 {
     font-family: 'Sacramento', cursive;
 }
 body{
@@ -24,7 +24,7 @@ a {
 h2 {
     margin-top: 0;
 }
-.button, .card, input, textarea {
+.card, input, textarea {
     border-radius: 20px;
     padding: 10px;
 }
@@ -32,8 +32,13 @@ li {
     list-style-type: none;
 }
 
+/*                              HEADER                           */
 header {
+    background-color: white;
     box-shadow: 0px 4px 18px 3px rgba(67,67,67,0.4);
+    position: fixed;
+    width: 100%;
+    z-index: 1;
 }
 header .section__content {
     padding: 15px 0;
@@ -41,17 +46,9 @@ header .section__content {
     justify-content: space-between;
     align-items: center;
 }
-.logo {
-    display: flex;
-    flex: 1;
-}
 .logo img {
     width: 45px;
     height: 45px;
-}
-.logo p {
-    margin: 0;
-    display: none;
 }
 #menu {
     position: absolute;
@@ -80,44 +77,52 @@ header .section__content {
     transition: height 300ms ease;
 }
 .top {
-    padding-top: 0;
+    padding-top: 75px;
     transition: padding-top 300ms ease;
 }
 .down {
-    padding-top: 160px;
+    padding-top: 235px;
     transition: padding-top 300ms ease;
 }
 #burger {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
+main {
+    padding-top: 75px;
+}
+
+/*                              HERO                             */
 video {
     display: none;
 }
-.hero .section__content {
+#hero .section__content {
     text-align: center;
     padding: 70px 0 50px 0;
 }
 h1 {
-    font-size: 2.3rem;
+    font-size: 2.5rem;
     font-weight: lighter;
     margin: 0;
 }
-.hero h2 {
-    font-size: 1.2rem;
+#hero h2 {
+    font-size: 1.5rem;
 }
 .button {
     display: inline-block;
+    border-radius: 27px;
     margin-top: 10px;
     box-shadow: 0px 4px 18px 3px rgba(67,67,67,0.4);
     background: linear-gradient(180deg, rgba(180,166,35, 0.9) 0%, rgba(84,109,41, 0.9) 100%);
-    padding: 10px 15px;
+    padding: 15px 20px;
 }
 .button a {
     color: white;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
+    font-weight: bold;
 }
 
+/*                              ABOUT                            */
 #about .section__content, #job .section__content, #prices .section__content, #contact .section__content {
     width: 100%;
     position: relative;
@@ -129,7 +134,7 @@ h1 {
     height: 200px;
     padding-top: 15px;
     text-align: center;
-    background-color: rgba(141,147,59, 0.8);
+    background-color: rgba(141,147,59, 0.95);
     color: white;
 }
 #about img, #job img, .card:first-of-type, iframe {
@@ -138,6 +143,9 @@ h1 {
     top: 90px;
     right: 0;
     box-shadow: 0px 4px 18px 3px rgba(67,67,67,0.4);
+}
+#about img, #job img {
+    max-width: 270px;
 }
 #about p, #job p {
     width: 90%;
@@ -148,6 +156,7 @@ h1 {
     margin-top: 125px;
 }
 
+/*                          PRICES                           */
 .cards, .contact__content {
     padding: 0;
     margin-top: 45px;
@@ -159,6 +168,7 @@ h1 {
     text-align: center;
     background-color: white;
     box-shadow: 0px 4px 18px 3px rgba(67,67,67,0.4);
+    border: solid 3px rgba(84,109,41, 0.1);
 }
 .card:first-of-type, iframe {
     width: 80%;
@@ -176,17 +186,22 @@ h1 {
     justify-content: center;
     align-items: center;
 }
+.title {
+    border-radius: 20px 20px 0 0;
+    background: linear-gradient(180deg, rgba(180,166,35, 0.8) 0%, rgba(84,109,41, 0.8) 100%);
+}
 .price {
     font-size: 2.3rem;
     padding-top: 15px;
 }
-.title {
-    border-radius: 20px 20px 0 0;
-    background-color: rgba(84,109,41, 0.9);
+.description {
+    padding: 0 15px;
 }
 .description, .price {
     color: rgba(84,109,41, 0.9);
 }
+
+/*                          CONTACT                              */
 
 #contact .section__content {
     padding-bottom: 50px;
@@ -229,15 +244,20 @@ iframe {
     border: solid 2px rgba(84,109,41, 0.9);
     height: 200px;
 }
+
+/*                              UP                              */
 #up {
-    display: none;
     position: fixed;
     right: 20px;
     bottom: 20px;
+    display: none;
+}
+.fa-circle-chevron-up {
     font-size: 1.7rem;
-    color: rgba(84,109,41, 1)
+    color: rgba(84,109,41, 1);
 }
 
+/*                          FOOTER                              */
 footer {
     text-align: center;
     background-color: rgba(84,109,41, 0.9);
@@ -250,5 +270,276 @@ footer {
 .footer__logo p {
     color: #E5D695;
     margin-top: 10px;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
+}
+
+/*                                                             */
+/*                      MEDIA QUERIES                          */
+/*                                                             */
+
+@media(min-width: 400px) {
+    #about img, #job img {
+        right: 15%;
+    }
+}
+
+@media(min-width:500px) {
+    #about h2, #job h2, #prices h2, #contact h2 {
+        display: block;
+        padding: 15px;
+        /*                  ?                     */
+        width: 100%; 
+        height: auto;
+    }
+    #about img, #job img {
+        position: static;
+        float: right;
+        margin: 5% 5% 0 0;
+        box-shadow: none;
+    }
+    #about p, #job p {
+        margin: 5% auto 0 auto;
+        font-size: 1.2rem;
+        line-height: 1.9rem;
+    }
+
+    .card:first-of-type, iframe {
+        position: static;
+        width: 100%;
+    }
+    .card {
+        border: none;
+    }
+    .cards, .contact__content {
+        margin-top: 5%;
+    }
+}
+
+@media(min-width:600px) {
+    .logo img {
+        width: 50px;
+        height: 50px;
+    }
+    #menu {
+        top: 85.08px;
+    }
+    #menu a {
+        font-size: 1.1rem;
+    }
+    #menu li {
+        padding: 15px;
+    }
+    .open {
+        height: 209.18px;
+    }
+    .top {
+        padding-top: 85.08px;
+    }
+    .down {
+        padding-top: 294.26px;
+    }
+
+    #hero .section__content {
+        padding: 70px 0;
+    }
+    .section__content {
+        padding: 40px 0;
+    }
+
+    main {
+        padding-top: 85.08px
+    }
+
+    #about p, #job p {
+        text-align: left;
+    }
+
+    .cards, .find-me {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .card, .card:first-of-type, .coords {
+        width: 47%;
+    }
+    .card:first-of-type {
+        height: 170px;
+    }
+    .description {
+        padding: 0;
+    }
+    .card h3 {
+        font-size: 1.4rem;
+    }
+    .cards, .contact__content {
+        margin-top: 50px;
+    }
+
+    iframe {
+        width: 50%;
+        border-width: 1px;
+    }
+    .find-me {
+        margin-bottom: 5%;
+        flex-wrap: nowrap;
+    }
+    .phone {
+        font-size: 1.3rem;
+    }
+    .address {
+        font-size: 1.2rem;
+    }
+    #send {
+        font-size: 1.3rem;
+        border-radius: 25px;
+    }
+}
+
+@media(min-width: 900px) {
+    .description {
+        font-size: 1.2rem;
+        padding: 0 10px;
+    }
+}
+
+@media(min-width: 1000px) {
+    header {
+        background: transparent;
+        box-shadow: none;
+    }
+    .logo {
+        margin-right: 5%;
+    }
+    .logo img {
+        width: 60px;
+        height: 60px;
+    }
+    #burger {
+        display: none;
+    }
+    header nav {
+        flex: 1;
+    }
+    #menu {
+        position: static;
+        background: transparent;
+        display: flex;
+        justify-content: space-between;
+    }
+    #menu a {
+        color: white;
+    }
+    #menu a:hover {
+        font-weight: bold;
+        text-decoration: underline;
+    }
+
+    #hero {
+        position: relative;
+    }
+    video {
+        display: block;
+        width: 100%;
+    }
+    #hero .section__content {
+        width: auto;
+        text-align: center;
+        padding: 0;
+        position: absolute;
+        top: 30%;
+        left: 10%;
+    }
+    h1, #hero h2 {
+        color: white;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+    #hero h2 {
+        font-size: 1.8rem;
+    }
+    .button {
+        padding: 15px 25px;
+        border-radius: 40px;
+        transition: transform 300ms ease-in-out;
+    }
+    .button:hover {
+        transform: scale(1.1);
+    }
+    .button a {
+        font-size: 1.5rem;
+    }
+
+    main {
+        padding: 0;
+    }
+
+    #about .section__content {
+        padding-top: 0;
+    }
+    #about img, #job img {
+        max-width: 300px;
+    }
+
+    .card, .card:first-of-type {
+        margin-bottom: 50px;
+        height: 250px;
+    }
+    .card h3 {
+        font-size: 1.6rem;
+    }
+    .price {
+        font-size: 3rem;
+    }
+    .description {
+        font-size: 1.3rem;
+    }
+
+    .contact__content {
+        display: flex;
+        justify-content: space-between;
+    }
+    .find-me {
+        flex-direction: column-reverse;
+        align-items: center;
+        margin: 0;
+    }
+    .find-me, form {
+        width: 47%;
+    }
+    .coords, iframe {
+        width: 100%;
+    }
+    .phone p {
+        margin-top: 0;
+        font-size: 1.5rem;
+    }
+    .address {
+        font-size: 1.4rem;
+    }
+    iframe {
+        flex: 1;
+    }
+    input, textarea {
+        padding: 15px;
+        border-radius: 25px;
+        font-size: 1.3rem;
+    }
+    #send {
+        margin: 0;
+        font-size: 1.5rem;
+        border-radius: 30px;
+        transition: transform 200ms ease-in-out;
+    }
+    #send:hover {
+        transform: scale(0.95);
+    }
+
+    .footer__logo img {
+        width: 40px;
+        height: 40px;
+    }
+    .footer__logo p {
+        font-size: 1.5rem;
+    }
 }
