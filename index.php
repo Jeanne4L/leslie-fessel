@@ -7,13 +7,14 @@
     <title>Psycho</title>
     <link rel="icon" type="image/png" href="images/logo.png"/>
         <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/eafcd51cfc.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
         <div class="section__content">
             <div class="logo">
-                <img src="images/logo.png" alt="logo personnage en tailleur">
+                <a href="index.php">
+                    <img src="images/logo.png" alt="logo personnage en tailleur">
+                </a>
             </div>
             <nav id="top">
                 <ul id="menu" class="closed">
@@ -95,7 +96,7 @@
                 <h2>Me contacter</h2>
                 <div class="contact__content">
                     <div class="find-me">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2691.031174525458!2d1.3254950149550617!3d47.58663569735129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e4a81d7a59590d%3A0x720b37fa25555560!2s5%20Avenue%20du%20Dr%20Jean%20Laigret%2C%2041000%20Blois!5e0!3m2!1sfr!2sfr!4v1669623251192!5m2!1sfr!2sfr"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2691.031174525458!2d1.3254950149550617!3d47.58663569735129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e4a81d7a59590d%3A0x720b37fa25555560!2s5%20Avenue%20du%20Dr%20Jean%20Laigret%2C%2041000%20Blois!5e0!3m2!1sfr!2sfr!4v1669623251192!5m2!1sfr!2sfr"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
                         <div class="coords">
                             <div class="phone">
                                 <p>06.98.50.41.84</p>
@@ -106,11 +107,25 @@
                             </div>
                         </div>
                     </div>
-                    <form method="post" action="post.php">
-                        <input type="name" name="name" placeholder="Votre nom*" required>
-                        <input type="email" name="email" placeholder="Votre email*" required>
-                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Votre message*" required></textarea>
+                    <form method="post" action="form.php">
+                        <input type="name" name="name" id="name" placeholder="Votre nom*" required>
+                        <p id="name__error">Ce champ ne doit contenir que des lettres</p>
+                        <input type="email" name="email" id="email" placeholder="Votre email*" required>
+                        <p id="email__error">Cet email est invalide</p>
+                        <textarea name="message" id="message" cols="30" rows="6" placeholder="Votre message*" required></textarea>
                         <input type="submit" value="Envoyer" id="send">
+                        <p id="validSend">Votre message a bien été envoyé, je vous recontacte au plus vite.</p>
+                        <p id="invalidSend">Une erreur est survenue, merci de réessayer plus tard.</p>
+
+                        <?php
+                            if(isset($_GET['status']) && !empty($_GET['status'])) {
+                                if($_GET['status'] == 'ok') {
+                                    echo "<script><document.querySelector('#validSend').style.display = 'block'</script>";
+                                } else {
+                                    echo "<script><document.querySelector('#invalidSend').style.display = 'block'</script>";
+                                }
+                            }
+                        ?>
                     </form>
                 </div>
             </div>

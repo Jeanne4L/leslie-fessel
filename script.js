@@ -5,7 +5,7 @@ let upBtn = document.querySelector('#up')
 let header = document.querySelector('header')
 let headerLi = document.querySelectorAll('header a')
 
-// display dropdown
+// fold/unfold the menu
 function displayMenu() {
     menu.classList.add('open')
     main.classList.add('down')
@@ -32,6 +32,7 @@ function changeColorHeaderLi(color) {
     }
 }
 
+// display the menu with click
 if(self.innerWidth < 1000) {
     burgerBtn.addEventListener('click', () => {
         if(displayMenu()) {
@@ -45,6 +46,7 @@ if(self.innerWidth < 1000) {
     menu.classList.remove('closed')
 }
 
+// display the button top of page with scroll
 window.addEventListener('scroll', () => {
     if (window.pageYOffset === 0) {
         upBtn.style.display = 'none'
@@ -53,6 +55,7 @@ window.addEventListener('scroll', () => {
     }
 })
 
+// change header color with scroll
 if(self.innerWidth > 1000) {
     window.addEventListener('scroll', () => {
         if (window.pageYOffset === 0) {
@@ -66,3 +69,30 @@ if(self.innerWidth > 1000) {
         }
     })
 }
+
+// check input value
+let nameInput = document.querySelector('#name')
+let nameError = document.querySelector('#name__error')
+let emailInput = document.querySelector('#email')
+let emailError = document.querySelector('#email__error')
+let emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+
+
+nameInput.addEventListener('input', (e) => {
+    if(/[^A-Za-z\s]/.test(e.target.value)) {
+        nameInput.style.borderColor = '#B80900'
+        nameError.style.display = 'block'
+    } else {
+        nameInput.style.borderColor= 'rgba(141,147,59, 0.8)'
+        nameError.style.display = 'none'
+    }
+})
+emailInput.addEventListener('change', (e) => {
+    if(emailRegex.test(e.target.value)) {
+        emailInput.style.borderColor= 'rgba(141,147,59, 0.8)'
+        emailError.style.display = 'none'
+    } else {
+        emailInput.style.borderColor = '#B80900'
+        emailError.style.display = 'block'
+    }
+})

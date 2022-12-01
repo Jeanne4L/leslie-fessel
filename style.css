@@ -244,6 +244,16 @@ iframe {
     border: solid 2px rgba(84,109,41, 0.9);
     height: 200px;
 }
+#name__error, #email__error {
+    display: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #B80900;
+    margin-top: 0;
+}
+#validSend, #invalidSend {
+    display: none;
+}
 
 /*                              UP                              */
 #up {
@@ -474,16 +484,19 @@ footer {
         padding: 0;
     }
 
-    #about .section__content {
+    #about .section__content, #contact .section__content {
         padding-top: 0;
     }
     #about img, #job img {
         max-width: 300px;
     }
 
+    .cards {
+        width: 80%;
+    }
     .card, .card:first-of-type {
         margin-bottom: 50px;
-        height: 250px;
+        height: 210px;
     }
     .card h3 {
         font-size: 1.6rem;
@@ -498,14 +511,21 @@ footer {
     .contact__content {
         display: flex;
         justify-content: space-between;
+        padding-bottom: 50px;
     }
     .find-me {
         flex-direction: column-reverse;
         align-items: center;
         margin: 0;
+        padding: 15px;
+        border-radius: 25px;
+        box-shadow: 0px 4px 18px 3px rgba(67,67,67,0.4);
     }
     .find-me, form {
         width: 47%;
+    }
+    .coords {
+        padding: 0;
     }
     .coords, iframe {
         width: 100%;
@@ -519,9 +539,9 @@ footer {
     }
     iframe {
         flex: 1;
+        box-shadow: none;
     }
     input, textarea {
-        padding: 15px;
         border-radius: 25px;
         font-size: 1.3rem;
     }
