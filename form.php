@@ -7,10 +7,8 @@
                 'X-Priority: 1';
 
     if (mail($to, $subject, $message, $headers)) { 
-        header('Location: index.php#contact?status=ok');
-        // echo '<p id="validSend">Votre message a bien été envoyé, je vous recontacte au plus vite.</p>';
+        header('Location: index.php?status=ok#contact');
     } else {
-        header('Location: index.php#contact?status=error');
-        // echo '<p id="invalidSend">Une erreur est survenue, merci de réessayer plus tard.</p>';
+        header('Location: index.php?status=error#contact');
     }
 ?>
