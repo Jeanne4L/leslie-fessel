@@ -548,6 +548,11 @@ footer {
         flex: 1;
         box-shadow: none;
     }
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
     input, textarea {
         border-radius: 25px;
         font-size: 1.3rem;
