@@ -18,7 +18,7 @@ a {
 .section__content, .cards, .contact__content {
     width: 90%;
     margin: auto;
-    padding: 30px 0
+    padding: 30px 0;
 }
 h2 {
     margin-top: 0;
@@ -52,23 +52,28 @@ header .section__content {
 #menu {
     position: absolute;
     right: 0;
-    top: 75px;
-    background-color: rgba(84,109,41, 0.1);
+    top: 78px;
     margin: 0;
     padding: 0;
     overflow: hidden;
     width: 100%;
+    background-color: white;
+    box-shadow: inset 0px 10px 10px 1px rgb(67 67 67 / 10%), 0px 20px 10px 1px rgb(67 67 67 / 20%);
 }
 #menu li {
     padding: 10px;
     text-align: center;
+    border-bottom: solid 1px rgba(176,175,143,0.2);
 }
 #menu a {
     text-transform: uppercase;
     font-size: 0.9rem;
 }
+#menu a:hover {
+    color: #B4A623;
+}
 .open {
-    height: 163.8px;
+    height: 162px;
     transition: height 300ms ease;
 }
 .closed {
@@ -76,11 +81,11 @@ header .section__content {
     transition: height 300ms ease;
 }
 .top {
-    padding-top: 75px;
+    padding-top: 77px;
     transition: padding-top 300ms ease;
 }
 .down {
-    padding-top: 235px;
+    padding-top: 240px;
     transition: padding-top 300ms ease;
 }
 #burger {
@@ -95,9 +100,13 @@ main {
 video {
     display: none;
 }
+#hero {
+    background-color: rgba(204, 174, 153, 0.3);
+    padding: 30px 0;
+}
 #hero .section__content {
     text-align: center;
-    padding: 70px 0 50px 0;
+    padding: 60px 0 60px 0;
 }
 h1 {
     font-size: 2.5rem;
@@ -126,6 +135,18 @@ h1 {
     width: 100%;
     position: relative;
 }
+.about {
+    overflow: hidden;
+}
+#about .section__content {
+    padding-top: 0;
+}
+.float {
+    float: right;
+    width: 270px;
+    height: 280px;
+    margin-left: 10px;
+}
 #about h2, #job h2, #prices h2, #contact h2 {
     margin-bottom: 0;
     display: inline-block;
@@ -145,15 +166,28 @@ h1 {
     box-shadow: 0px 4px 18px 3px rgba(67,67,67,0.4);
 }
 #about img, #job img {
-    max-width: 270px;
+    width: 270px;
+}
+#about img {
+    top: 60px;
 }
 #about p, #job p {
     width: 90%;
-    margin: 155px auto 0 auto;
+    margin: 20px auto 0 auto;
     text-align: justify;
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
-#job p {
-    margin-top: 125px;
+#job .float {
+    height: 255px;
+}
+#job h3 {
+    width: 90%;
+    margin: 35px auto 0 auto;
+}
+#job li {
+    list-style: circle;
+    width: 95%;
 }
 
 /*                          PRICES                           */
@@ -210,20 +244,23 @@ h1 {
     text-align: center;
     margin-top: 80px;
 }
-/* .find-me a {
-    position: relative;
-} */
-.map {
-    object-fit: cover;
-}
 .coords {
-    padding: 10px 0 20px 0;
+    padding: 20px 0 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 .phone {
     font-size: 1.1rem;
 }
-.phone, .address {
+.phone, .email, .address {
     font-weight: bold;
+}
+.address p {
+    margin: 0;
+}
+.phone p {
+    margin: 0;
 }
 input, textarea {
     width: 100%;
@@ -246,8 +283,9 @@ input:focus, textarea:focus {
     background: linear-gradient(180deg, rgba(180,166,35, 0.9) 0%, rgba(84,109,41, 0.9) 100%);
 }
 .map {
+    object-fit: cover;
     border-radius: 20px;
-    border: solid 2px rgba(84,109,41, 0.9);
+    border: solid 2px white;
     height: 200px;
 }
 #name__error, #email__error {
@@ -256,6 +294,9 @@ input:focus, textarea:focus {
     font-weight: bold;
     color: #B80900;
     margin-top: 0;
+}
+#contact img:not(.map) {
+    width: 100%;
 }
 
 /*                              UP                              */
@@ -269,12 +310,18 @@ input:focus, textarea:focus {
     font-size: 1.7rem;
     color: rgba(84,109,41, 1);
 }
+.consults {
+    position: absolute;
+    left: 27%;
+    right: 27%;
+    text-align: center;
+}
 
 /*                          FOOTER                              */
 footer {
     text-align: center;
     background-color: rgba(84,109,41, 0.9);
-    padding: 20px;
+    padding: 20px 0 40px 0;
 }
 .footer__logo img {
     width: 30px;
@@ -282,8 +329,11 @@ footer {
 }
 .footer__logo p {
     color: #E5D695;
-    margin-top: 10px;
+    margin: 10px 0 0 0;
     font-size: 1.4rem;
+}
+footer span {
+    color: #E5D695;
 }
 
 /*                                                             */
@@ -300,18 +350,32 @@ footer {
     }
     .section__content--max {
         width: 90%;
-        margin: 60px auto 0 auto;
+        margin: 40px auto 0 auto;
+    }
+    .float {
+        display: none;
     }
     #about img, #job img {
         position: static;
-        float: right;
         box-shadow: none;
+    }
+    #about img {
+        float: left;
+        margin-right: 15px;
+    }
+    #job img {
+        float: right;
+        margin-left: 15px;
     }
     #about p, #job p {
         margin: 0;
-        font-size: 1.2rem;
+        font-size: 1rem;
         line-height: 1.9rem;
         width: 100%;
+    }
+    #job h3 {
+        width: 100%;
+        margin-bottom: 10px;
     }
 
     .card:first-of-type, .map {
@@ -358,11 +422,7 @@ footer {
     }
 
     main {
-        padding-top: 85.08px
-    }
-
-    #about p, #job p {
-        text-align: left;
+        padding-top: 85.08px;
     }
 
     .cards, .find-me {
@@ -385,6 +445,15 @@ footer {
     .cards, .contact__content {
         margin-top: 50px;
     }
+    #contact .section__content {
+        padding-bottom: 20px;
+    }
+    #contact {
+        text-align: center;
+    }
+    #contact img:not(.map) {
+        width: 80%;
+    }
 
     .find-me {
         margin-bottom: 5%;
@@ -396,10 +465,13 @@ footer {
     .map {
         border-width: 1px;
     }
+    .coords {
+        padding-top: 20px;
+    }
     .phone {
         font-size: 1.3rem;
     }
-    .address {
+    .address, .email {
         font-size: 1.2rem;
     }
     #send {
@@ -412,6 +484,9 @@ footer {
     .description {
         font-size: 1.2rem;
         padding: 0 10px;
+    }
+    #contact img:not(.map) {
+        width: 50%;
     }
 }
 
@@ -441,6 +516,10 @@ footer {
         background: transparent;
         display: flex;
         justify-content: space-between;
+        box-shadow: none;
+    }
+    #menu li {
+        border: none;
     }
     #menu a {
         color: white;
@@ -452,6 +531,7 @@ footer {
 
     #hero {
         position: relative;
+        padding: 0;
     }
     video {
         display: block;
@@ -462,14 +542,15 @@ footer {
         text-align: center;
         padding: 0;
         position: absolute;
-        top: 30%;
-        left: 10%;
+        top: 35%;
+        right: 35%;
+        left: 35%;
     }
     h1, #hero h2 {
         color: white;
     }
     h1 {
-        font-size: 3rem;
+        font-size: 3.3rem;
     }
     #hero h2 {
         font-size: 1.8rem;
@@ -496,7 +577,6 @@ footer {
     #about img, #job img {
         max-width: 300px;
     }
-
     .card, .card:first-of-type {
         margin-bottom: 60px;
         height: 210px;
@@ -532,7 +612,7 @@ footer {
     }
     .coords {
         padding: 0;
-        margin-top: 5px;
+        margin: 10px 0;
     }
     .coords, .map {
         width: 100%;
@@ -541,7 +621,7 @@ footer {
         margin-top: 0;
         font-size: 1.5rem;
     }
-    .address {
+    .address, .email {
         font-size: 1.4rem;
     }
     .map {
@@ -565,6 +645,10 @@ footer {
     }
     #send:hover {
         transform: scale(0.95);
+    }
+
+    .consults {
+        font-size: 1.1rem;
     }
 
     .footer__logo img {
