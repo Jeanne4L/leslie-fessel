@@ -7,7 +7,6 @@
     <title>Psycho</title>
     <link rel="icon" type="image/png" href="images/logo.png">
         <link rel="stylesheet" href="min/style.min.css">
-
         <script src="https://kit.fontawesome.com/eafcd51cfc.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -96,7 +95,7 @@
                     <p>
                         La première consultation a pour objectif <!--de créer une première rencontre afin--> de tisser les premiers liens de confiance. Cette première séance permettra également d'établir la nécessité, ou non, d'une passation de bilan psychomoteur, de cerner votre demande et d'élaborer les objectifs des séances. Je pourrai ainsi adapter au mieux le cadre des consultations et mes propositions de soins.
                         <br>
-                        Le bilan psychomoteur se déroule sur 3 séances d'une heure avec une séance de restitution des résultats (ainsi qu'un compte-rendu écrit). Il a pour but d'analyser le développement psychomoteur de la personne au travers de différents items comme les coordinations, l'équilibre, la latéralité, le tonus, l'espace et le temps, le schéma corporel et l'image du corps. Le bilan psychomoteur peut constituer une première étape diagnostique dans le répérage d'un retard de développement ou de troubles des apprentissages. Les résultats du bilan permettront d'affiner les indications de suivi en psychomotricité ou d'une réorientation thérapeutique.
+                        Le bilan psychomoteur se déroule sur 3 séances d'une heure avec une séance de restitution des résultats (ainsi qu'un compte-rendu écrit). Il a pour but d'analyser le développement psychomoteur de la personne au travers de différents items comme les coordinations, l'équilibre, la latéralité, le tonus, l'espace et le temps, le schéma corporel et l'image du corps. Le bilan psychomoteur peut constituer une première étape diagnostique dans le repérage d'un retard de développement ou de troubles des apprentissages. Les résultats du bilan permettront d'affiner les indications de suivi en psychomotricité ou d'une réorientation thérapeutique.
                     </p>
                 </div>
             </div>
