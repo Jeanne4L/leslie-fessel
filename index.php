@@ -7,6 +7,7 @@
     <title>Leslie Fessel - psychomotricienne</title>
     <link rel="icon" type="image/png" href="images/logo.png">
         <link rel="stylesheet" href="min/style.min.css">
+
         <script src="https://kit.fontawesome.com/eafcd51cfc.js" crossorigin="anonymous"></script>
 </head>
 <body>

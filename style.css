@@ -314,7 +314,7 @@ input:focus, textarea:focus {
     left: 27%;
     right: 27%;
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 1.15rem;
 }
 
 /*                          FOOTER                              */
@@ -341,14 +341,19 @@ footer span {
 /*                                                             */
 
 @media(min-width:500px) {
-    #hero {
-        background-color: rgba(204, 174, 153, 0.3);
-    }
     #about h2, #job h2, #prices h2, #contact h2 {
         display: block;
-        padding: 15px;
-        width: 100%; 
+        width: 90%;
+        margin: auto;
         height: auto;
+        background-color: transparent;
+        color: rgba(64,69,56,.9);
+    }
+    #about .section__content, #prices .section__content {
+        background-color: rgba(84,109,41, 0.1);
+    }
+    #about .section__content {
+        padding-top: 30px;
     }
     .section__content--max {
         width: 90%;
@@ -398,7 +403,7 @@ footer span {
         height: 50px;
     }
     #menu {
-        top: 85.08px;
+        top: 81px;
     }
     #menu a {
         font-size: 1.1rem;
@@ -410,7 +415,7 @@ footer span {
         height: 209.18px;
     }
     .top {
-        padding-top: 85.08px;
+        padding-top: 81px;
     }
     .down {
         padding-top: 294.26px;
@@ -587,9 +592,6 @@ footer span {
         padding: 0;
     }
 
-    #about .section__content, #contact .section__content {
-        padding-top: 0;
-    }
     #about img, #job img {
         max-width: 300px;
     }
