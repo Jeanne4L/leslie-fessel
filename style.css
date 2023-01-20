@@ -170,6 +170,9 @@ h1 {
 #about img {
     top: 60px;
 }
+#job img {
+    top: 170px;
+}
 #about p, #job p {
     width: 90%;
     margin: 20px auto 0 auto;
@@ -177,8 +180,11 @@ h1 {
     overflow-wrap: break-word;
     hyphens: auto;
 }
+#job h2 {
+    overflow-wrap: break-word;
+}
 #job .float {
-    height: 255px;
+    height: 300px;
 }
 #job h3 {
     width: 90%;
@@ -339,6 +345,11 @@ footer span {
 /*                                                             */
 /*                      MEDIA QUERIES                          */
 /*                                                             */
+@media(min-width:430px) {
+    #job img {
+        top: 170px;
+    }
+}
 
 @media(min-width:500px) {
     #about h2, #job h2, #prices h2, #contact h2 {

@@ -8,6 +8,7 @@
     <link rel="icon" type="image/png" href="images/logo.png">
         <link rel="stylesheet" href="min/style.min.css">
 
+
         <script src="https://kit.fontawesome.com/eafcd51cfc.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -60,9 +61,9 @@
         </section>
         <section id="job">
             <div class="section__content">
-                <h2>Psychomotricité</h2>
+                <h2>La psychomotricité, qu'est-ce que c'est ?</h2>
                 <div class="section__content--max">
-                    <img src="images/psycho-img.png" alt="logo psychomotricité">
+                    <img src="images/psychomotricite.jpg" alt="logo psychomotricité">
                     <div class="float"></div>
                     <p>
                         La psychomotricité est axée sur la prévention, le dépistage et la rééducation des troubles psychomoteurs, à tout âge de la vie. La.le psychomotricien.ne étudie les interactions entre <b>perception sensorielle, émotion, pensée, mouvement et comportement</b>.
